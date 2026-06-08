@@ -484,7 +484,7 @@ export default function ArchiveList() {
             )}
           >
             <FolderOpen className="w-4 h-4 shrink-0" />
-            계층식 분류 구조 탐색
+            계층형 분류 구조 탐색
           </button>
           <button
             onClick={() => { setActiveTab('facet'); }}

@@ -34,12 +34,12 @@ export default function ArchiveCard({ item }: ArchiveCardProps) {
       className="group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full"
     >
       <Link to={`/archive/${item.id}`} className="block flex-grow">
-        <div className="aspect-[16/10] relative overflow-hidden bg-gray-50 flex items-center justify-center">
+        <div className="aspect-[3/4] relative overflow-hidden bg-stone-50/40 flex items-center justify-center border-b border-stone-100">
           {displayThumbnail ? (
             <img
               src={getAssetUrl(rawUrl)}
               alt={item.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-contain p-1.5 group-hover:scale-[1.03] transition-transform duration-500"
               referrerPolicy="no-referrer"
               onError={(e) => {
                 // If it already failed on the fallback Unsplash, then prevent infinite loop and show placeholder

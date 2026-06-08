@@ -21,14 +21,14 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 아카이브 헤더 */}
-        <header className="mb-20 text-center max-w-3xl mx-auto">
+        <header className="mb-14 text-center max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             className="inline-flex items-center gap-1.5 px-3 py-1 bg-stone-100 text-stone-900 rounded-full text-[10px] font-bold uppercase mb-6 tracking-widest border border-stone-200"
           >
             <Shield className="w-3.5 h-3.5" />
-            naksangeukoe Archival Guidelines & Policy
+            Naksan Theatre Digital Archive — Team DI6
           </motion.div>
           <h1 className="text-4xl md:text-5xl font-sans font-extrabold text-stone-900 tracking-tight mb-8 leading-tight">
             대학 연극 예술의 역사와 맥락을 <br />
@@ -39,30 +39,92 @@ export default function About() {
           </p>
         </header>
 
-        {/* 미션과 수집 범위 */}
+        {/* 학과 과제 및 설계 팀 정보 대시보드 */}
+        <section className="mb-20 bg-stone-50 border border-stone-200/80 rounded-3xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-4">
+            <span className="text-[10px] font-bold text-stone-605 bg-stone-200/50 py-1 px-2.5 rounded-full border border-stone-300 font-mono tracking-wider">
+              ACADEMIC RESEARCH & SYSTEM DESIGN
+            </span>
+            <h2 className="text-xl md:text-2xl font-bold text-stone-900 font-sans tracking-tight">
+              낙산극회 디지털 아카이브 정리 및 기술 체계 설계
+            </h2>
+            <div className="space-y-2 text-[11px] text-stone-500 font-semibold font-mono">
+              <div className="flex items-center gap-2">
+                <span className="text-stone-400 w-16 select-none">연구 과목</span>
+                <span className="text-stone-800">문화자원과 아카이브</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-stone-400 w-16 select-none">연구 학기</span>
+                <span className="text-stone-850">2026학년도 연구과제</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-stone-400 w-16 select-none">개발 팀명</span>
+                <span className="text-stone-900 font-extrabold">DI6 (디아이식스)</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-2xl p-5 border border-stone-200/80 space-y-4">
+            <h4 className="text-xs font-black text-stone-900 tracking-wider font-mono border-b border-stone-100 pb-2 uppercase flex items-center justify-between">
+              <span>PROJECT DESIGN CONTEXT</span>
+              <span className="text-stone-400 font-normal">DI6 ARCHIVISTS</span>
+            </h4>
+            
+            <div className="grid grid-cols-3 gap-2.5 text-center">
+              {[
+                { name: '김다인', role: '자료정리' },
+                { name: '노현진', role: '자료정리' },
+                { name: '송영찬', role: '자료수집' },
+                { name: '안예린', role: '문서작성' },
+                { name: '이지우', role: '자료수집' },
+                { name: '장성현', role: '팀장/총괄' },
+              ].map((member, i) => (
+                <div key={i} className="p-2 bg-stone-50 rounded-xl border border-stone-150">
+                  <div className="text-[11.5px] font-extrabold text-stone-800">{member.name}</div>
+                  <div className="text-[9px] text-stone-400 font-bold mt-0.5">{member.role}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 아카이브 개요 및 수집 범위 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           <div className="bg-white rounded-3xl p-10 border border-stone-200/50 shadow-xs relative overflow-hidden">
-            <div className="w-10 h-10 bg-stone-100 rounded-xl flex items-center justify-center mb-6 text-stone-955 border border-stone-200/50">
+            <div className="w-10 h-10 bg-stone-100 rounded-xl flex items-center justify-center mb-6 text-stone-900 border border-stone-200/50">
               <Target className="w-4 h-4" />
             </div>
-            <h3 className="text-lg font-bold text-stone-900 mb-4">아카이브 사명</h3>
-            <p className="text-stone-500 font-medium text-xs leading-relaxed">
-              본 기록관은 한성대학교 대학 연극 문화의 유일무이한 인쇄 기물 및 시청각 자료를 안전히 보관하여 후배 기수들의 제작 연구를 입체 지탱하고 무대 예술의 불씨를 일구는 데 이바지합니다.
-            </p>
+            <h3 className="text-lg font-bold text-stone-900 mb-4">아카이브 구축 개요</h3>
+            <p className="text-stone-400 font-semibold text-[10px] tracking-wider uppercase mb-3 font-mono">Why Establish This Digital Archive?</p>
+            <div className="space-y-3 pt-1">
+              <div className="flex items-start gap-2.5">
+                <span className="inline-flex py-0.5 px-2 bg-stone-100 text-stone-800 text-[10px] font-extrabold rounded-md border border-stone-200 shrink-0">아카이브 주제</span>
+                <span className="text-stone-600 font-semibold text-xs leading-relaxed">한성대학교 대학 중앙 연극동아리 낙산극회</span>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <span className="inline-flex py-0.5 px-2 bg-stone-100 text-stone-800 text-[10px] font-extrabold rounded-md border border-stone-200 shrink-0">기록 수집 대상</span>
+                <span className="text-stone-600 font-semibold text-xs leading-relaxed">공연 및 창작활동 기록 (극본, 영상, 포스터, 홍보물 일체)</span>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <span className="inline-flex py-0.5 px-2 bg-stone-100 text-stone-800 text-[10px] font-extrabold rounded-md border border-stone-200 shrink-0">핵심 구축 목적</span>
+                <span className="text-stone-600 font-semibold text-xs leading-relaxed">기록 보존, 창작 과정 기록, 공동체 역사 관리</span>
+              </div>
+            </div>
           </div>
           
           <div className="bg-white rounded-3xl p-10 border border-stone-200/50 shadow-xs relative overflow-hidden">
-            <div className="w-10 h-10 bg-stone-100 rounded-xl flex items-center justify-center mb-6 text-stone-955 border border-stone-200/50">
+            <div className="w-10 h-10 bg-stone-100 rounded-xl flex items-center justify-center mb-6 text-stone-900 border border-stone-200/50">
               <BookOpen className="w-4 h-4" />
             </div>
-            <h3 className="text-lg font-bold text-stone-900 mb-4">수집 범위</h3>
+            <h3 className="text-lg font-bold text-stone-900 mb-4">학술적 수집 범위 및 대상</h3>
+            <p className="text-stone-400 font-semibold text-[10px] tracking-wider uppercase mb-3 font-mono">Collection Scope & Target Artifacts</p>
             <ul className="space-y-3">
               {[
                 '정기공연, 워크숍, 신입생 특별 공연 극본 원고 및 오디오·영상 데이터',
                 '동아리 기수별 운영위원회 정기회의 세부 회록 및 예결산 행정 서류철',
                 '연극제, 대동제 축제 참가 기획서 및 희귀 인쇄 포스터 팜플렛 일체',
               ].map((text, i) => (
-                <li key={i} className="flex items-start gap-2 text-stone-650 font-medium text-xs leading-relaxed">
+                <li key={i} className="flex items-start gap-2 text-stone-600 font-medium text-xs leading-relaxed">
                   <CheckCircle2 className="w-4 h-4 text-stone-900 shrink-0 mt-0.5" />
                   <span>{text}</span>
                 </li>

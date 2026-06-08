@@ -144,7 +144,7 @@ export const FACET_EVENTS: FacetEvent[] = [
   },
   {
     id: 'EVT-00011',
-    title: '워크샵 <내 말이 안 들리나>',
+    title: '워크샵 <내말이 안 들리나>',
     date: '2024-11-21',
     type: '워크샵',
     seasonId: 'SEA-2024-2',
@@ -214,7 +214,7 @@ export const FACET_EVENTS: FacetEvent[] = [
   },
   {
     id: 'EVT-00018',
-    title: '신입부원 워크샵 <17.5도의 연인>',
+    title: '신입부원 워크샵 <17.5 도의 연인>',
     date: '2025-04-12',
     type: '워크샵',
     seasonId: 'SEA-2025-1',
@@ -315,7 +315,7 @@ export const FACET_EVENTS: FacetEvent[] = [
   },
   {
     id: 'EVT-00028',
-    title: '2025 대동제 <낙극분장소>',
+    title: '2025 대동제 <낙극 분장쇼>',
     date: '2025-05-14',
     type: '대동제',
     seasonId: 'SEA-2025-1',
@@ -335,7 +335,7 @@ export const FACET_EVENTS: FacetEvent[] = [
   },
   {
     id: 'EVT-00030',
-    title: '단막극제 <옥탑대전>',
+    title: '단막극제 <옥탑 대전>',
     date: '2025-11-15',
     type: '단막극제 공연',
     seasonId: 'SEA-2025-2',
@@ -854,7 +854,7 @@ export const FACET_RECORDS: FacetRecord[] = [
   },
   {
     id: 'REC-00024',
-    title: '신입부원 워크샵 <17.5도의 연인> 영상',
+    title: '신입부원 워크샵 <17.5 도의 연인> 영상',
     type: '영상',
     format: 'MP4 / URL',
     creator: '목요일팀 25-1',
@@ -946,7 +946,7 @@ export const FACET_RECORDS: FacetRecord[] = [
   },
   {
     id: 'REC-00029',
-    title: '2025 대동제 <낙극분장소> 페이스페인팅 메이크업 체험 피드',
+    title: '2025 대동제 <낙극 분장쇼> 페이스페인팅 메이크업 체험 피드',
     type: '활동자료',
     format: '인스타그램 피드 / URL',
     creator: '기획부스팀',
